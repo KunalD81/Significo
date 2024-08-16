@@ -1,30 +1,52 @@
-*::selection{
-    background-color:#f19c6f;
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    --salmon:#ef9d71;
+    --black:black;
+    --white:white;
+    --cyan:#AEDEE0;
+    --dsalmon:#502c28;
+    --dcyan:#254444;
 
 }
 
+body{
+    transition: background-color ease-out .5s;
+}
+
+*::selection{
+    background-color: var(--salmon);
+
+}
+
+.vdodiv{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
 
 body[theme='black']{
-    background-color: #000;
+    background-color: var(--black);
 }
 body[theme='black'] .section{
-    color: white;
+    color: var(--white);
 }
 body[theme='cyan']{
-    background-color: cyan;
+    background-color:var(--cyan);
 }
 body[theme='cyan'] .section{
-    color: rgb(37, 68, 68);
+    color: var(--dcyan);
 }
 body[theme='salmon']{
-    background-color: salmon;
+    background-color:var(--salmon);
 }
 body[theme='salmon'] .section{
-    color:rgb(99, 55, 50);
+    color:var(--dsalmon);
 }
 body[theme='white']{
-    background-color: white;
+    background-color: var(--white);
 }
 body[theme='white'] .section{
-    color: black;
+    color: var(--black);
 }
